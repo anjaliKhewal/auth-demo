@@ -9,6 +9,10 @@ export const AppRoutes:Routes = [
     component:DefaultComponent
 },
 {
+    path: 'default',
+    component:DefaultComponent
+},
+{
     path:'login',
     component:UserLoginComponent
 }

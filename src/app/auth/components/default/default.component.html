@@ -1,3 +1,71 @@
 <p>
   default works!
 </p>
+
+<!--<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <form style="margin-bottom: 5px;" (submit)="search(flight,origin,destination,date)">
+      <input name="flight" [(ngModel)]="flight" class="mdl-textfield__input"
+      type="text" placeholder="Flight Number" />
+      <br><br>
+      <span style="align-content:flex-start">OR</span>
+     <input name="origin" [(ngModel)]="origin" class="mdl-textfield__input"
+      type="text" placeholder="Origin" />
+      <input name="destination" [(ngModel)]="destination" class="mdl-textfield__input"
+      type="text" placeholder="Destination" />
+      <br><br>
+      <input name="date" [(ngModel)]="date" class="mdl-textfield__input"
+      type="text" placeholder="Date" />
+      <br><br>
+      <button class="mdl-button" (submit)="search(flight)">Search</button>
+    </form>
+
+    <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp"
+    style="width: 100%;">
+     <tbody *ngIf="flightResult">
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Flight Number</td>
+          <td class="mdl-data-table__cell--non-numeric">{{flightResult.flightNumber}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Carrier</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.carrier}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Origin</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.origin}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Departure</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.departure}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Destination</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.destination}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Arrival</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.arrival}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Aircraft</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.aircraft}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Distance</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.distance}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Travel Time</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.travelTime}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Status</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>-->

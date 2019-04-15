@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { DefaultComponent } from './components/default/default.component';
 
-import { HttpRequest, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
+import { LoginServiceService } from '../services/login-service.service';
 
 @NgModule({
   declarations: [UserLoginComponent, DefaultComponent],
@@ -11,8 +13,11 @@ import { HttpRequest, HttpClient } from '@angular/common/http';
     CommonModule,
    // HttpClient,
    // HttpRequest,
+   HttpClientModule,
+   FormsModule
   ],
   providers:[
+    LoginServiceService
 
 
   ]

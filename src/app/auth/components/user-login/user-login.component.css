@@ -1,0 +1,9 @@
+:host .success {
+    background: #558B2F;
+    color: #fff;
+  }
+
+  :host .failure {
+    background: #C62828;
+    color: #fff;
+  }
