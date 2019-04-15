@@ -1,8 +1,6 @@
-<p>
-  user-login works!
-</p>
 
-<form>
+
+<!--<form>
   <div class="container">
     <table>
       <tr>
@@ -22,4 +20,78 @@
   </tr>
   </table>
   </div>
-</form>
+</form>-->
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <div *ngIf="loginRes">
+      <div class="mdl-chip success" *ngIf="loginRes.message=='success'">Login Successful! </div>
+      <div class="mdl-chip failure" *ngIf="loginRes.message=='failure'">Wrong username and password. Please try again!</div>
+      </div>
+
+      <br><br>
+    <form style="margin-bottom: 5px;" (submit)="search(username,password)">
+      <input name="username" [(ngModel)]="username" class="mdl-textfield__input"
+      type="text" placeholder="Username" />
+      <br><br>
+    
+     <input name="password" [(ngModel)]="password" class="mdl-textfield__input"
+      type="text" placeholder="Password" />
+      <br><br>
+      <button class="mdl-button" (submit)="search(username,password)">Log in</button>
+    </form>
+
+    <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp"
+    style="width: 100%;">
+     <tbody *ngIf="loginRes">
+
+      <!--<tr>
+        <td class="mdl-data-table__cell--non-numeric"> Response </td>
+        <td class="mdl-data-table__cell--non-numeric">Login {{loginRes.message}}</td>
+      </tr>-->
+        <!--<tr>
+          <td class="mdl-data-table__cell--non-numeric">Flight Number</td>
+          <td class="mdl-data-table__cell--non-numeric">{{flightResult.flightNumber}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Carrier</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.carrier}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Origin</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.origin}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Departure</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.departure}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Destination</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.destination}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Arrival</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.arrival}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Aircraft</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.aircraft}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Distance</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.distance}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Travel Time</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.travelTime}}</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Status</td>
+            <td class="mdl-data-table__cell--non-numeric">{{flightResult.status}}</td>
+        </tr>-->
+      </tbody>
+    </table>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
