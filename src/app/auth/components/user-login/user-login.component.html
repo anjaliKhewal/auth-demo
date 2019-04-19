@@ -23,8 +23,18 @@
 </form>-->
 
 <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+      <h3>
+          Welcome dear user!
+        </h3>
+        <h4>
+         A complete solution to all your memorizing problems! 
+        </h4>
+      <img src="./../assets/thinking.png" alt="thinking!">
+
+  </div>
   <div class="mdl-cell mdl-cell--4-col">
+    <div style="padding:60px"></div>
     <div *ngIf="loginRes">
       <div class="mdl-chip success" *ngIf="loginRes.message=='success'">Login Successful! </div>
       <div class="mdl-chip failure" *ngIf="loginRes.message=='failure'">Wrong username and password. Please try again!</div>
@@ -93,5 +103,5 @@
       </tbody>
     </table>
   </div>
-  <div class="mdl-cell mdl-cell--4-col"></div>
+  <!--<div class="mdl-cell mdl-cell--4-col"></div>-->
 </div>

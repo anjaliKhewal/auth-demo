@@ -6,15 +6,22 @@ import { DefaultComponent } from './components/default/default.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { LoginServiceService } from '../services/login-service.service';
+import { Router, RouterModule } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [UserLoginComponent, DefaultComponent],
+  declarations: [UserLoginComponent, 
+    DefaultComponent,
+    DashboardComponent
+  ],
   imports: [
     CommonModule,
    // HttpClient,
    // HttpRequest,
    HttpClientModule,
-   FormsModule
+   FormsModule,
+  // Router,
+   RouterModule
   ],
   providers:[
     LoginServiceService
