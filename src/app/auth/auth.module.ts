@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms'
 import { LoginServiceService } from '../services/login-service.service';
 import { Router, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BankingComponent } from './components/banking/banking.component';
 
 @NgModule({
   declarations: [UserLoginComponent, 
     DefaultComponent,
-    DashboardComponent
+    DashboardComponent,
+    BankingComponent
   ],
   imports: [
     CommonModule,
