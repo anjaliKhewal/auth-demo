@@ -1,0 +1,44 @@
+
+
+<h3>
+  Welcome dear user! <br><br></h3>
+  <h4>
+  Please fill out your details below
+</h4>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--3-col">
+      
+      
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <div style="padding:40px"></div>
+    <!--<div *ngIf="loginRes">
+      <div class="mdl-chip success" *ngIf="loginRes.message=='success'">Login Successful! </div>
+      <div class="mdl-chip failure" *ngIf="loginRes.message=='failure'">Wrong username and password. Please try again!</div>
+      </div>-->
+
+      <br><br>
+    <form style="margin-bottom: 5px;" (submit)="save()">
+      <input name="name" [(ngModel)]="name" class="mdl-textfield__input"
+      type="text" placeholder="Name" />
+      <br><br>
+    
+     <input name="address" [(ngModel)]="address" class="mdl-textfield__input"
+      type="text" placeholder="Address" />
+      <br><br>
+
+      <input name="phone" [(ngModel)]="phone" class="mdl-textfield__input"
+      type="text" placeholder="Phone Number" />
+      <br><br>
+
+      <input name="email" [(ngModel)]="email" class="mdl-textfield__input"
+      type="text" placeholder="Email" />
+      <br><br>
+
+      <button class="mdl-button" (submit)="save()">Save</button>
+    </form>
+  </div>
+
+  <div class="mdl-cell mdl-cell--3-col"></div>
+</div>
