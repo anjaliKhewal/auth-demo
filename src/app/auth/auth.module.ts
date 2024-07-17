@@ -6,15 +6,26 @@ import { DefaultComponent } from './components/default/default.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { LoginServiceService } from '../services/login-service.service';
+import { Router, RouterModule } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BankingComponent } from './components/banking/banking.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
-  declarations: [UserLoginComponent, DefaultComponent],
+  declarations: [UserLoginComponent, 
+    DefaultComponent,
+    DashboardComponent,
+    BankingComponent,
+    UserProfileComponent
+  ],
   imports: [
     CommonModule,
    // HttpClient,
    // HttpRequest,
    HttpClientModule,
-   FormsModule
+   FormsModule,
+  // Router,
+   RouterModule
   ],
   providers:[
     LoginServiceService

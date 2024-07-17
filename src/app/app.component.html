@@ -6,10 +6,11 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">My App</span>
+    <span class="mdl-layout-title"> 
+        <a class="mdl-navigation__link mdl-layout-title" [routerLink]="['/profile']">My Organizer App</a></span>
     <div class="mdl-layout-spacer"></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only">
-    <a class="mdl-navigation__link" [routerLink]="['/default']">User Profile</a>
+    <a class="mdl-navigation__link" [routerLink]="['/profile']">User Profile</a>
    <a class="mdl-navigation__link" [routerLink]="['/login']">Login</a>
     </nav>
     </div>
@@ -17,14 +18,6 @@
     <main class="mdl-layout__content" style="padding: 10px;">
     </main>
     </div>
-  
-    <h3>
-      Welcome to {{ title }}!
-    </h3>
-    <h4>
-     A Single solution to all your secrets! 
-    </h4>
-    <img src="./../assets/thinking.png" alt="thinking!">
     <router-outlet></router-outlet>
     </div>
   

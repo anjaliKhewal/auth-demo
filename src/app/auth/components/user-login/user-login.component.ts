@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpRequest,HttpEvent,HttpEventType } from '@angular/common/http';
 import { LoginServiceService, LoginInterface } from 'src/app/services/login-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -18,7 +19,8 @@ export class UserLoginComponent implements OnInit {
   loginRes:LoginInterface;
   res:string;
 
-  constructor(private loginService:LoginServiceService) { }
+  constructor(private loginService:LoginServiceService,private router: Router
+    ) { }
 
   ngOnInit() {
     
@@ -32,6 +34,9 @@ export class UserLoginComponent implements OnInit {
       this.loginService.login(username,password).subscribe(loginRes =>{
         this.loginRes = loginRes
         console.log(loginRes);
+        if(loginRes.message=='success'){
+          this.router.navigate(['/dashboard']);
+        }
       });
     } 
 
